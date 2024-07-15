@@ -4,6 +4,9 @@
     font-family: 'Courier New', Courier, monospace;
     scroll-behavior: smooth;
 }
+.menu{
+    display: none;
+}
 p{
     text-align: center;
 }
@@ -70,7 +73,11 @@ header nav ul li a:hover{
     transition: 0.4s;
 }
 #home .container .image_port img{
-    box-shadow: orange 0 0 50px;
+    animation-name: hadi;
+}
+#home .container .image_port img{
+    box-shadow: orange 0 0 70px;
+    transition: 0.6s;
 }
 .text{
     width: 50%;
@@ -336,12 +343,30 @@ footer a{
     text-decoration: none;
     color: white;
 }
-
+.menu{
+    display: none;
+}
 
 /*resposiv*/
 @media screen and (max-width:768px)  {
     body{
         scroll-behavior: smooth;
+    }
+    .menu{
+        display: block;
+        font-size: 20px;
+        background-color: #000;
+        color: white;
+        border: #000;
+        translate: 210px -50px;
+    }
+    .close{
+        display: block;
+        font-size: 25px;
+        background-color: #000000;
+        color: white;
+        border: #000;
+        translate: 210px -50px;
     }
     #home{
         background-color: black;
@@ -366,13 +391,14 @@ footer a{
         text-align: center;
         display: block;
     }
-    
+    .menuhide{
+        display: none;
+    }
     nav ul{
         display: flex;
         flex-direction: column;
         translate: 120px 0;
         gap: 30px;
-        display: none;
     }
     #home .container{
         display: flex;
@@ -391,11 +417,13 @@ footer a{
     }
     .container .text h1{
         font-size: xx-large;
+        
     }
     .logo h1{
         letter-spacing: 2.5px;
         font-size: xx-large;
         font-weight: 700;
+        translate: -60px 0;
     }
     
     span{
@@ -411,11 +439,17 @@ footer a{
         transition: 0.4s;
     }
     #home .container .image_port img{
-        box-shadow: orange 0 0 50px;
+        box-shadow: orange 0 0 30px;
     }
     .text{
         width: 80%;
         margin-bottom: 10vh;
+    }
+
+
+
+    .close{
+
     }
         /*service*/
 #service{
@@ -477,6 +511,7 @@ footer a{
     align-items: center;
     flex-direction: column;
     margin-bottom: 60vh;
+    scroll-behavior: smooth;
 }
 #skilles .container{
     display: flex;
