@@ -4,6 +4,9 @@
     font-family: 'Courier New', Courier, monospace;
     scroll-behavior: smooth;
 }
+p{
+    text-align: center;
+}
 body{
     background-color: #000;
 }
@@ -50,7 +53,10 @@ nav ul{
 }
 .logo h1{
     letter-spacing: 2.5px;
+    font-size: xx-large;
+    font-weight: 700;
 }
+
 span{
     color: orange;
 }
@@ -118,6 +124,9 @@ header nav ul li a:hover{
     margin-bottom: 150px;
     font-size: x-large;
 }
+.serv:hover{
+    translate: 0 -30px;
+}
 /*skilles*/
 #skilles {
     height: 100vh;
@@ -147,6 +156,9 @@ header nav ul li a:hover{
     flex-direction: column;
     padding: 10px;
     box-shadow: 0 0 30px orange;
+}
+.skil:hover{
+    translate: 0 -30px;
 }
 .skil h2{
     color: white;
@@ -194,6 +206,9 @@ header nav ul li a:hover{
     padding: 15px;
     border-radius: 40px;
     position: relative;
+}
+.pro:hover{
+    translate: 0 -30px;
 }
 .pro a{
     margin-top: 50px;
@@ -320,4 +335,259 @@ footer{
 footer a{
     text-decoration: none;
     color: white;
+}
+
+
+/*resposiv*/
+@media screen and (max-width:768px)  {
+    #home{
+        background-color: black;
+        height: 100vh;
+    }
+    #home a,li{
+        text-decoration: none;
+        list-style: none;
+        color: #fff;
+        font-size: large;
+    
+    }
+    header{
+        background-color: #000;
+        color: #fff;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 70px;
+        width: 200px;
+        text-align: center;
+        display: block;
+    }
+    
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        translate: 120px 0;
+        gap: 30px;
+        display: none;
+    }
+    #home .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 85%;
+        margin: 10vh auto;
+    
+    }
+    #home .container .image_port img{
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        overflow-y: hidden;
+    }
+    .container .text h1{
+        font-size: xx-large;
+    }
+    .logo h1{
+        letter-spacing: 2.5px;
+        font-size: xx-large;
+        font-weight: 700;
+    }
+    
+    span{
+        color: orange;
+    }
+    h1,h2,p{
+        color: #fff;
+    }
+    header nav ul li a:hover{
+        letter-spacing: 1.5px;
+        border-bottom: orange 2px solid;
+        border-top: orange 2px solid;
+        transition: 0.4s;
+    }
+    #home .container .image_port img{
+        box-shadow: orange 0 0 50px;
+    }
+    .text{
+        width: 80%;
+        margin-bottom: 10vh;
+    }
+        /*service*/
+#service{
+    
+    height: 150vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40vh;
+    margin-bottom: 50vh;
+}
+#service .container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10vh auto;
+}
+.allserv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.serv{
+    width: 250px;
+    height: 300px;
+    padding: 20px;
+    border: 2.5px solid orange;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 0 30px orange;
+    margin-top: 30px;
+}
+.serv a i{
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+}
+.container .title{
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 80px;
+    font-size: x-large;
+}
+.serv:hover{
+    translate: 25px 0;
+}
+
+
+/*skilles*/
+#skilles {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60vh;
+}
+#skilles .container{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skil{
+    width: 150px;
+    height: 150px;
+    border: 2.5px solid orange;
+    border-radius: 40px;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 0 30px orange;
+}
+.skil:hover{
+    scale: 1.1;
+}
+.skil h2{
+    color: white;
+    font-size: x-large;
+}
+#skilles .title{
+    text-align: center;
+    margin-bottom: 100px;
+    color: #fff;
+    font-size: x-large;
+    
+}
+.skil a i{
+    font-size: 60px;
+}
+#skilles .container:hover > :not(:hover){
+    opacity: 0.4;
+    backdrop-filter: blur(200px);
+}
+/*project*/
+#project{
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40vh;
+}
+#project .container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 15vh;
+    margin-bottom: 35vh;
+}
+.pro{
+    width: 280px;
+    height: 400px;
+    border: 2.5px solid orange;
+    box-shadow: 0 0 30px orange;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 40px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.pro:hover{
+    translate: 15px 0;
+}
+.pro a{
+    margin-top: 50px;
+}
+.pro h2{
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.pro a i{
+    font-size: 60px;
+    color: white;
+}
+#project .title{
+    font-size: x-large;
+}
+.show{
+    position: absolute;
+    bottom: 15px;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 40px;
+    background-color: transparent;
+    border:solid white 2px;
+    text-decoration: none;
+    color: orange;
+}
+.show:hover{
+    background-color: orange;
+    color: white;
+    border: none;
+    transition: 0.6s;
+}
+p{
+    text-align: center;
+}
+.res{
+    display: none;
+}
 }
