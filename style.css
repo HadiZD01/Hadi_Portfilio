@@ -171,7 +171,7 @@ header nav ul li a:hover{
     font-size: x-large;
     
 }
-.skil a i{
+.skil i{
     font-size: 60px;
 }
 #skilles .container:hover > :not(:hover){
@@ -340,6 +340,9 @@ footer a{
 
 /*resposiv*/
 @media screen and (max-width:768px)  {
+    body{
+        scroll-behavior: smooth;
+    }
     #home{
         background-color: black;
         height: 100vh;
@@ -499,6 +502,7 @@ footer a{
 }
 .skil:hover{
     scale: 1.1;
+    transition: 0.5s;
 }
 .skil h2{
     color: white;
@@ -511,12 +515,12 @@ footer a{
     font-size: x-large;
     
 }
-.skil a i{
+.skil i{
     font-size: 60px;
 }
-#skilles .container:hover > :not(:hover){
+#skilles .container:hover>:not(:hover){
     opacity: 0.4;
-    backdrop-filter: blur(200px);
+    
 }
 /*project*/
 #project{
