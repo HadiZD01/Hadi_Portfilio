@@ -4,6 +4,7 @@
     font-family: 'Courier New', Courier, monospace;
     scroll-behavior: smooth;
 }
+
 .menu{
     display: none;
 }
@@ -102,7 +103,7 @@ header nav ul li a:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    position: relative;
     margin: 10vh auto;
 }
 .allserv{
@@ -119,7 +120,20 @@ header nav ul li a:hover{
     border-radius: 40px;
     text-align: center;
     box-shadow: 0 0 30px orange;
+    top: 150px;
+    display: ;
+    /*position: absolute;*/
 }
+/*.se1{
+    left:-600px;
+}
+.se2{
+    right:38%;
+    transform: translateY(600px);
+}
+.se3{
+    right: -600px;
+}*/
 .serv a i{
     font-size: 60px;
     margin-top: 50px;
@@ -310,6 +324,12 @@ header nav ul li a:hover{
 .res .logo{
     text-align: center;
 }
+.res button{
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    translate: 100px 0;
+}
 .infb{
     translate: 250px 0;
 }
@@ -321,20 +341,15 @@ header nav ul li a:hover{
     border-radius: 40px;
     padding: 20px;
     box-shadow: 0 0 30px orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
-.opfb{
-    opacity: 1;
-}
-.opin{
-    opacity: 1;
-}
-.opdi{
-    opacity: 1;
-}
-.indi,.inin,.infb{
+.hide{
     opacity: 0;
 }
+
+
 footer{
     text-align: center;
     padding: 5px;
@@ -343,7 +358,7 @@ footer a{
     text-decoration: none;
     color: white;
 }
-.menu{
+.menu,.close{
     display: none;
 }
 
@@ -351,6 +366,9 @@ footer a{
 @media screen and (max-width:768px)  {
     body{
         scroll-behavior: smooth;
+    }
+    .navbar{
+        width: fit-content;
     }
     .menu{
         display: block;
@@ -397,7 +415,7 @@ footer a{
     nav ul{
         display: flex;
         flex-direction: column;
-        translate: 120px 0;
+        translate: 180px 0;
         gap: 30px;
     }
     #home .container{
@@ -485,6 +503,7 @@ footer a{
     text-align: center;
     box-shadow: 0 0 30px orange;
     margin-top: 30px;
+    
 }
 .serv a i{
     font-size: 60px;

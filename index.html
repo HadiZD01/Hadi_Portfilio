@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Hadi Portfilio</title>
 </head>
 <body>
@@ -19,21 +21,23 @@
            <button class="close menuhide" ><i class="fa-solid fa-xmark"></i></button>
            <nav>
             <ul class="navbar menuhide">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#skilles">Skilles</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li onclick="add(this.id)" class="active" id="navhome"><a href="#home">Home</a></li>
+                <li onclick="add(this.id)" id="navservice"><a href="#service">Services</a></li>
+                <li onclick="add(this.id)" id="navskilles"><a href="#skilles">Skilles</a></li>
+                <li onclick="add(this.id)" id="navproject"><a href="#project">Project</a></li>
+                <li onclick="add(this.id)" id="navcontact"><a href="#contact">Contact</a></li>
             </ul>
            </nav>
         </header>
         <div class="container">
-            <div class="text">
-                <h1>Hi,I am <span>Hadi</span> </h2>
-                <h2>A <span>Web Developer</span></h3>
-                <p>I am a university student majoring in information systems engineering, desktop applications, and a web page programmer. I have little experience, and currently I am very good at interface programming and the trend is in development.</p>
+            <div class="text" id="txt">
+                <h1 data-aos="fade-right" >Hi,I am <span>Hadi</span> </h2>
+                <h2 data-aos="fade-right"data-aos-duration="1500" >A <span>Web Developer</span></h3>
+                <p data-aos="fade-right"data-aos-duration="2500">I am a university student majoring in information systems engineering, desktop applications, and a web page programmer. I have little experience, and currently I am very good at interface programming and the trend is in development.</p>
             </div>
-            <div class="image_port">
+            <div data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000" class="image_port">
                 <img src="Porfile.jpg"  alt="Porfile Photo">
             </div>
         </div>
@@ -44,18 +48,18 @@
                 <div class="title">
                     <h1>My Service</h1>
                 </div>
-                <div class="allserv">
-                    <div class="serv">
+                <div  class="allserv">
+                    <div data-aos="zoom-out-right"data-aos-duration="2000" class="serv se1">
                         <a href=""><i class="fa-solid fa-display"></i></a>
                         <h2><span>Front-end</span></h2>
                         <p>Interface programming in my mother tongue and a little framework, and we are good at programming interfaces</p>
                     </div>
-                    <div class="serv">
+                    <div data-aos="zoom-out-up"data-aos-duration="1500"  class="serv se2">
                         <a href=""><i class="fa-solid fa-code"></i></a>
                         <h2><span>Back-end</span></h2>
                         <p>The back-end programming that I am not good at is in the stage of learning, developing and applying what I have learned</p>
                     </div>
-                    <div class="serv">
+                    <div data-aos="zoom-out-left"data-aos-duration="2000" class="serv se3">
                         <a href=""><i class="fa-solid fa-laptop-code"></i></a>
                         <h2><span>Full-Stack</span></h2>
                         <p>The overall programming of the page. I can only program from the interface side because I am not developed in the back-end side</p>
@@ -66,27 +70,27 @@
         <section id="skilles">
             <div class="title"><h1>My Skilles</h1></div>
             <div class="container">
-                <div class="skil">
+                <div data-aos="flip-left" class="skil">
                     <i class="fa-brands fa-html5" style="color: #d48021;"></i>
                     <h2>HTML</h2>
                 </div>
-                <div class="skil">
+                <div data-aos="flip-left" class="skil">
                     <i class="fa-brands fa-css3-alt" style="color: blue;"></i>
                     <h2>CSS</h2>
                 </div>
-                <div class="skil">
+                <div data-aos="flip-left" class="skil">
                     <i class="fa-brands fa-js" style="color: #FFD43B;"></i>
                     <h2>JAVA SCRIPT</h2>
                 </div>
-                <div class="skil">
+                <div data-aos="flip-left" class="skil">
                     <i class="fa-solid fa-database" style="color: white;"></i>
                     <h2>MY SQL</h2>
                 </div>
-                <div class="skil">
+                <div data-aos="flip-left" class="skil">
                     <i class="fa-brands fa-php" style="color: blue;"></i>
                     <h2>PHP</h2>
                 </div>
-                <div class="skil">
+                <div data-aos="flip-left" class="skil">
                     <i class="fa-brands fa-java" style="color: white;"></i>
                     <h2>JAVA</h2>
                 </div>
@@ -98,19 +102,19 @@
                 <h1>My Project</h1>
             </div>
             <div class="container">
-                <div class="pro">
+                <div  data-aos="zoom-out-right"data-aos-duration="2000" class="pro">
                     <a href="#"><i class="fa-solid fa-pizza-slice"></i></a>
                     <h2>Pizza</h2>
                     <p>A web page for a pizza restaurant to order and learn about the restaurant, its menu, and everything related to the restaurant</p>
                     <a class="show" href="https://hadizd01.github.io/ElhadiFood/">Show Me</a>
                 </div>
-                <div class="pro">
+                <div  data-aos="zoom-out-up"data-aos-duration="1500" class="pro">
                     <a href="#"><i class="fa-solid fa-user-tie"></i></a>
                     <h2>Portfilio</h2>
                     <p>A personal page for an architect to view his work, applications used in his work, and a way to communicate with him</p>
                     <a class="show" href="https://hadizd01.github.io/Portfilio/">Show Me</a>
                 </div>
-                <div class="pro">
+                <div  data-aos="zoom-out-left"data-aos-duration="2000" class="pro">
                     <a href="#"><i class="fa-solid fa-bars"></i></a>
                     <h2>curds</h2>
                     <p>A practical application for the dashboard in order to add one or more products, delete one or all products, perform calculations, and modify products.</p>
@@ -132,8 +136,8 @@
                 </div>
                 <div class="contact">
                     <div class="res fb">
-                            <div class="logo"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
-                        <div id="fb" class="info infb ">
+                            <button class="logo lgfb"><i class="fa-brands fa-facebook"></i></button>
+                        <div id="fb" class="info infb hide">
                             <div class="user">
                                 <div class="profile"><img src="fb.jpg"></div>
                                 <div class="username">Ha Di</div>
@@ -148,8 +152,8 @@
                     </div>
 
                     <div class="res insta">
-                        <div class="logo " onclick="opacfb()" ><a href="#"><i class="fa-brands fa-square-instagram"></i></a></div>
-                        <div id="insta" class="info inin ">
+                        <button class="logo lgin" ><i class="fa-brands fa-square-instagram"></i></button>
+                        <div id="insta" class="info inin hide">
                             <div class="user">
                                 <div class="profile"><img src="fb.jpg" ></div>
                                 <div class="username">hadi_zd1</div>
@@ -163,11 +167,11 @@
                     </div>
 
                     <div class="res disc">
-                        <div class="logo"><a href="#"><i class="fa-brands fa-discord"></i></a></div>
-                        <div id="disc" class="info indi ">
+                        <button class="logo lgdi"><i class="fa-brands fa-discord"></i></button>
+                        <div id="disc" class="info indi hide">
                             <div class="user">
                                 <div class="profile"><img src="fb.jpg"></div>
-                                <div class="username">HA_DI</div>
+                                <div class="username"> HA_DI </div>
                             </div>
                         
                             <div class="follower">
@@ -184,5 +188,9 @@
         <p>&copy; 2024 <a href="#home">Hadi Zidani</a>. All rights reserved.</p>
     </footer>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
